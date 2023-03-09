@@ -14,3 +14,7 @@ print('\n')
 print('Spinning World'.count('n'))  # 3
 print('Spinning World'.count('s'))  # 0
 print('Spinning World'.count('i', 0, 2))  # Spまでが対象なので0
+print('\n')
+# splitメソッド：区切って分割して取得
+print('World-Baseball-Classic'.split('-'))  # ['---', '----']
+print('World\nBaseball\nClassic')  # 改行される
