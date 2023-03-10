@@ -23,3 +23,7 @@ print('\n')
 print('abcedgeabc'.strip('abc'))  # edge
 print('edgeabc'.rstrip('abc'))  # 末尾から文字を取り除く
 print('abcedge'.lstrip('abc'))  # 先頭から文字を取り除く
+print('\n')
+# 別の文字列に置換するメソッド
+print("It's My Life".replace('M', 'm').replace('L', 'l'))  # It's my life
+print("It's My Life".replace("It's My Life", 'やーーーー！'))  # It's my life
