@@ -18,3 +18,8 @@ print('\n')
 # splitメソッド：区切って分割して取得
 print('World-Baseball-Classic'.split('-'))  # ['---', '----']
 print('World\nBaseball\nClassic')  # 改行される
+print('\n')
+# 文字を取り除くメソッド
+print('abcedgeabc'.strip('abc'))  # edge
+print('edgeabc'.rstrip('abc'))  # 末尾から文字を取り除く
+print('abcedge'.lstrip('abc'))  # 先頭から文字を取り除く
