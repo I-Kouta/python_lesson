@@ -9,9 +9,13 @@ print('32の2乗は' + str(32 ** 2))  # 1024,累乗の計算
 print("\n")
 # ビット値
 # 10進数を2進数に変換して出力する記述
-num = 40
-bin_str = format(num, 'b')
-print(str(num) + 'は2進数では' + bin_str)
+num = 10
+binary_num = format(num, 'b')
+print(str(num) + 'は2進数では' + binary_num)
+# 2進数を10進数に変換
+num_bit = "101000"
+decimal_num = int(num_bit, 2)
+print(str(num_bit) + 'は10進数では' + str(decimal_num))
 # 10=>1010, 13=>1101
 # |：片方でもが1の場合は1を返すので1111
 print("10 | 13 = " + str(10 | 13))  # 10 | 13 = 15
