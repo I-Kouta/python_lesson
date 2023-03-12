@@ -31,3 +31,13 @@ print("10を左へ2ビットシフトすると" + str(10 << 2))  # 40
 
 # >>：右辺の数だけ右へシフトされる, 1ビットごとに値は0.5倍
 print("80を右へ2ビットシフトすると" + str(80 >> 2))  # 20
+print('\n')
+
+# trueは1, falseは0と等価
+flag = True
+if (flag):
+    print(True + 3)  # ここでは数値の1
+    print(str(True) + " is 1")  # ここではTrueの文字列
+else:
+    print(False + 2)
+    print(str(False) + " is 0")
