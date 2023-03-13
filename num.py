@@ -16,6 +16,7 @@ print(str(num) + 'は2進数では' + binary_num)
 num_bit = "101000"
 decimal_num = int(num_bit, 2)
 print(str(num_bit) + 'は10進数では' + str(decimal_num))
+del decimal_num  # 変数を削除する
 # 10=>1010, 13=>1101
 # |：片方でもが1の場合は1を返すので1111
 print("10 | 13 = " + str(10 | 13))  # 10 | 13 = 15
