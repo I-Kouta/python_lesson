@@ -15,4 +15,6 @@ elif likePerfume == "かしゆかおじさん":
     PerfumeLocks = "かしゆかおじさん"
 else:
     PerfumeLocks = "気になる姫"
-print("Perfume Locksといえば" + PerfumeLocks + "!!!")
+print("Perfume Locksといえば" + PerfumeLocks + "!!!\n")
+# 比較演算子
+print(bool(14 % 3 == 2))  # True
