@@ -17,10 +17,16 @@ else:
     PerfumeLocks = "気になる姫"
 print("Perfume Locksといえば" + PerfumeLocks + "!!!\n")
 # 比較演算子
-msgA = len("マワルカガミ")  # 6
-msgB = len("コミュニケーション")  # 9
-print(bool(str(msgA) == str(msgB)))  # false
+msgA = int(len("マワルカガミ"))  # 6
+msgB = int(len("コミュニケーション"))  # 9
+print(bool(msgA == msgB))  # false
 print(bool(msgA != msgB))  # true
 print(bool(msgA <= msgB))  # true
 print('\n')
 # unicodeのコードポイント
+print(ord("a"))  # 97
+print(ord("B"))  # 66
+# 要素が含まれる
+array = ["レーザービーム", "スパイス", "いじわるなハロー"]
+print(bool("スパイス" in array))  # true
+print(bool("ビーム" in array))  # false
