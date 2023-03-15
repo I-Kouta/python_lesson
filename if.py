@@ -30,3 +30,7 @@ print(ord("B"))  # 66
 array = ["レーザービーム", "スパイス", "いじわるなハロー"]
 print(bool("スパイス" in array))  # true
 print(bool("ビーム" in array))  # false
+# 論理和・論理積・否定
+print(bool(5 < msgA or 20 < msgA))  # true,一方がtrueならtrueを返す
+print(bool(5 < msgA and 20 < msgA))  # false,一方がfalseならfalseを返す
+print(bool(not 5 < msgA))  # 逆を返す
