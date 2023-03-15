@@ -17,4 +17,10 @@ else:
     PerfumeLocks = "気になる姫"
 print("Perfume Locksといえば" + PerfumeLocks + "!!!\n")
 # 比較演算子
-print(bool(14 % 3 == 2))  # True
+msgA = len("マワルカガミ")  # 6
+msgB = len("コミュニケーション")  # 9
+print(bool(str(msgA) == str(msgB)))  # false
+print(bool(msgA != msgB))  # true
+print(bool(msgA <= msgB))  # true
+print('\n')
+# unicodeのコードポイント
