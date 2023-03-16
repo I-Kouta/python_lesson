@@ -42,3 +42,8 @@ print(array1 == array2)  # true
 print(array1 is array2)  # オブジェクトが別々なのでfalse
 print(array2 is array3)  # 同じオブジェクトを示しているのでtrue
 print("\n")
+
+# 固有のidを取得
+print(id(array1))  # 4515128768
+print(id(array2))  # 4515723456 → array1とは異なる
+print(id(array3))  # 4515723456 → array2と同様
