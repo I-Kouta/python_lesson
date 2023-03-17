@@ -1,10 +1,10 @@
 # 繰り返し処理
 num = 1  # この値から
 sum = 0
-last = 80
+last = 44
 print(str(num) + "から" + str(last) + "までの総和を算出")
 while num <= last:  # いくつまで
-    sum += num**4  # 右辺の処理をして繰り返す
+    sum += num  # 右辺の処理をして繰り返す
     num += 1  # 1ずつ増やしていく
 else:
     print("計算結果は" + str(sum) + "です")
@@ -19,12 +19,12 @@ print(reciprocal_n)  # めっちゃ大きい
 print(reciprocal_ans)  # ちょっと値を越える
 print(reciprocal_ans - 1 / (reciprocal_n))  # ギリギリ超えない
 
-# 1から数えて逆数の和が8を越えるのはいくつか
+# 1から数えて和が1000を越えるのはいくつか
 ans = 0
 n = 0
 while ans < 1000:  # これを越える値
     n += 1
     ans += n
-print(n)  # めっちゃ大きい
+print(n)  # これを足すと値を越える
 print(ans)  # ちょっと値を越える
 print(ans - n)  # ギリギリ超えない
