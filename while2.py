@@ -12,3 +12,12 @@ for initial, value in list.items():
     count += 1
 else:
     print("曲数：" + str(count))
+
+num = 1
+times = 10
+for i in range(times):
+    old = num
+    num *= 2
+    print(str(old) + "×2=" + str(num))
+else:
+    print(str(times) + "回繰り返して合計は" + str(num) + "で終了")
