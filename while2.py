@@ -8,7 +8,7 @@ else:
 count = 0
 list = {"e": "edge", "T": "Tiny Baby", "H": "Hurly Burly"}
 for initial, value in list.items():
-    print("頭文字：" + initial + ",曲：" + value)
+    print(str(count + 1) + "曲目：" + initial + ",曲：" + value)
     count += 1
 else:
     print("曲数：" + str(count))
