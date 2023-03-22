@@ -21,3 +21,13 @@ for i in range(times):
     print(str(old) + "×2=" + str(num))
 else:
     print(str(times) + "回繰り返して合計は" + str(num) + "で終了")
+
+del num
+
+# breakで終了させる
+num = 50
+while True:
+    print("num = " + str(num))
+    num -= 10
+    if num < 10:
+        break
