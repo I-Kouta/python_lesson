@@ -31,3 +31,13 @@ while True:
     num -= 10
     if num < 10:
         break
+print("\n")
+
+# continueで処理をスキップさせられる
+total = 0
+for number in [10, 20, "30", 40, "pass", 60]:
+    if isinstance(number, str):
+        continue  # 文字型の要素は出力しない
+    print("num=" + str(number))
+    total += number
+print("Total = " + str(total))
