@@ -38,3 +38,9 @@ numberList.remove(101)  # "101"は不可
 print(numberList)  # 101が消えている
 numberList.clear()  # 全ての要素を削除
 print(numberList)  # []のみ
+
+# 同じ要素が含まれるか
+bookMark = ["GitHub", "ChatGPT", "Progate", "JOBCAN"]
+print("ChatGPT" in bookMark)  # true
+print("chatgpt" in bookMark)  # false, 完全に一致しないと不可
+print("ChatGPT" not in bookMark)  # false
