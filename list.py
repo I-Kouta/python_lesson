@@ -10,3 +10,8 @@ print("要素の数は" + str(len(PerfumeList)) + "つです\n")
 print(PerfumeList[0:2])  # SWまで。最後は要素+1
 print(PerfumeList[:2])  # 同じ
 print(PerfumeList[2:])
+print("\n")
+print("変更前のオブジェクトidは" + str(id(PerfumeList)))
+PerfumeList[-1] = "マワルカガミ"
+print(PerfumeList[-1])  # マワルカガミ
+print("変更後のオブジェクトidは" + str(id(PerfumeList)) + "で、変わっていません")
