@@ -12,6 +12,19 @@ print(PerfumeList[:2])  # 同じ
 print(PerfumeList[2:])
 print("\n")
 print("変更前のオブジェクトidは" + str(id(PerfumeList)))
+# 要素を入れ替える
 PerfumeList[-1] = "マワルカガミ"
 print(PerfumeList[-1])  # マワルカガミ
 print("変更後のオブジェクトidは" + str(id(PerfumeList)) + "で、変わっていません")
+print("\n")
+# リストを追加する
+PerfumeList.append("ハテナビト")
+print(PerfumeList)
+print("\n")
+# 指定位置に要素を挿入
+numberList = [101, 102, 106, 107]
+numberList.insert(2, 103)  # 2番目の値の前に3を挿入する
+print(numberList)  # 101, 102, 103, 106, 107
+addList = [104, 105]
+numberList[3:3] = addList
+print(numberList)  # これで番号順
