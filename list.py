@@ -28,3 +28,13 @@ print(numberList)  # 101, 102, 103, 106, 107
 addList = [104, 105]
 numberList[3:3] = addList
 print(numberList)  # これで番号順
+del numberList[-1]
+print(numberList)  # 107が消えている
+del numberList[2:5]
+print(numberList)  # 103から105が消えている
+numberList.pop(1)
+print(numberList)  # 102が消えている
+numberList.remove(101)  # "101"は不可
+print(numberList)  # 101が消えている
+numberList.clear()  # 全ての要素を削除
+print(numberList)  # []のみ
