@@ -50,3 +50,6 @@ print(num.index(402))  # 最初に見つかった位置を返す,見つからな
 print("\n")
 print("before:", num)
 print("after :", newNum)
+# range型オブジェクトを引数に指定してリストオブジェクトを指定
+length10 = list(range(10))
+print(length10)  # 0から9までの数値を要素としてもつリスト
