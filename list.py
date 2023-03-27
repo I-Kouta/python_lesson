@@ -41,7 +41,7 @@ print(numberList)  # []のみ
 
 # 同じ要素が含まれるか
 num = [401, 402, 404, 404, 405]
-newNum = sorted(num)
+newNum = sorted(num, reverse=True)
 print("404" in num)  # true
 print("40" in num)  # false, 完全に一致しないと不可
 print("401" not in num)  # false
