@@ -40,9 +40,13 @@ numberList.clear()  # 全ての要素を削除
 print(numberList)  # []のみ
 
 # 同じ要素が含まれるか
-num = ["401", "402", "404", "404", "405"]
+num = [401, 402, 404, 404, 405]
+newNum = sorted(num)
 print("404" in num)  # true
 print("40" in num)  # false, 完全に一致しないと不可
 print("401" not in num)  # false
-print(num.count("404"))  # 404のみだと0
-print(num.index("402"))  # 最初に見つかった位置を返す,見つからなかったらエラー
+print(num.count(404))  # "404"は0
+print(num.index(402))  # 最初に見つかった位置を返す,見つからなかったらエラー
+print("\n")
+print("before:", num)
+print("after :", newNum)
