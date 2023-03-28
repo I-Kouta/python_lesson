@@ -52,4 +52,13 @@ print("before:", num)
 print("after :", newNum)
 # range型オブジェクトを引数に指定してリストオブジェクトを指定
 length10 = list(range(10))
-print(length10)  # 0から9までの数値を要素としてもつリスト
+print(length10, "\n")  # 0から9までの数値を要素としてもつリスト
+# 多次元リスト
+teamPacific = [["ソフトバンク", 1], ["オリックス", 2], [
+    "楽天", 3], ["西武", 4], ["千葉ロッテ", 5], ["日本ハム", 6]]
+print(teamPacific[0])  # ["ソフトバンク", 1]
+print(teamPacific[1][0])  # オリックス
+for p in [0, 1, 2, 3, 4, 5]:
+    for m in [0, 1]:
+        print("[" + str(p) + "][" + str(m) + "] = ", end='')
+        print(teamPacific[p][m])
