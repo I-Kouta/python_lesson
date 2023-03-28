@@ -60,5 +60,4 @@ print(teamPacific[0])  # ["ソフトバンク", 1]
 print(teamPacific[1][0])  # オリックス
 for p in [0, 1, 2, 3, 4, 5]:
     for m in [0, 1]:
-        print("[" + str(p) + "][" + str(m) + "] = ", end='')
-        print(teamPacific[p][m])
+        print("[" + str(p) + "][" + str(m) + "] = ", teamPacific[p][m])
