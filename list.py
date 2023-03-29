@@ -38,6 +38,7 @@ numberList.remove(101)  # "101"は不可
 print(numberList)  # 101が消えている
 numberList.clear()  # 全ての要素を削除
 print(numberList)  # []のみ
+del numberList
 
 # 同じ要素が含まれるか
 num = [401, 402, 404, 404, 405]
@@ -50,6 +51,8 @@ print(num.index(402))  # 最初に見つかった位置を返す,見つからな
 print("\n")
 print("before:", num)
 print("after :", newNum)
+del num
+del newNum
 # range型オブジェクトを引数に指定してリストオブジェクトを指定
 length10 = list(range(10))
 print(length10, "\n")  # 0から9までの数値を要素としてもつリスト
@@ -61,3 +64,13 @@ print(teamPacific[1][0])  # オリックス
 for p in [0, 1, 2, 3, 4, 5]:
     for m in [0, 1]:
         print("[" + str(p) + "][" + str(m) + "] = ", teamPacific[p][m])
+print("\n")
+del teamPacific
+# リスト内包表記
+max = 5
+numberList = [i for i in range(1, max + 1)]
+print(numberList)  # [1, 2, 3, 4, 5]
+numberListA = [i * 10 for i in range(1, max + 1)]
+print(numberListA)  # [10, 20, 30, 40, 50]
+numberListB = [i for i in range(1, 11) if i % 2 == 0]
+print(numberListB)  # [2, 4, 6, 8, 10] 偶数を表示
