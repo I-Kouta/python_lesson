@@ -73,4 +73,10 @@ print(numberList)  # [1, 2, 3, 4, 5]
 numberListA = [i * 10 for i in range(1, max + 1)]
 print(numberListA)  # [10, 20, 30, 40, 50]
 numberListB = [i for i in range(1, 11) if i % 2 == 0]
-print(numberListB)  # [2, 4, 6, 8, 10] 偶数を表示
+print(numberListB, "\n")  # [2, 4, 6, 8, 10] 偶数を表示
+# 多重ループ
+# 赤カッコ内を先に繰り返す
+myList = [[i * 100 + j for j in range(1, 3)]for i in range(1, 4)]
+myListB = [i * 100 + j for j in range(1, 3) for i in range(1, 4)]
+print(myList)  # [[101, 102], [201, 202], [301, 302]]
+print(myListB)  # [101, 201, 301, 102, 202, 302]
