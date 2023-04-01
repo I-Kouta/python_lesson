@@ -16,3 +16,6 @@ print(str(len(numTuple)) + "つ数値の積は" +
 numTupleB = (5, 6)
 newNumTuple = numTuple + numTupleB
 print(newNumTuple)  # (3, 4, 2, 5, 6)
+# タプルを入れ替える
+reverseTuple = sorted(newNumTuple, reverse=True)
+print(reverseTuple)
