@@ -21,3 +21,10 @@ if resultPatB:
     print("「" + resultPatB.group() + "」" + "は先頭でパターンにマッチします")
 else:
     print("パターンにマッチしません")
+
+patC = re.compile(r"59nh")
+resultPatC = patC.search(target64)
+if result:
+    print(resultPatC.group() + "は存在します")
+else:
+    print("一致しません")
