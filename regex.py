@@ -30,15 +30,32 @@ else:
     print("一致しません")
 print("\n")
 
+# マッチした文字列を取得
 
-def checkMatch(target64, pattern):
-    resultPatD = pattern.search(target64)
-    if resultPatD:
-        print(resultPatD.group(0))
+
+def checkMatch(msg, pattern):
+    result = pattern.search(msg)
+    if result:
+        print(result.group(0))
     else:
-        print("マッチしません")
+        print("一致する文字はありません")
 
 
-pattern = re.compile(r"jy59")
-checkMatch("496, fd3r, 59", pattern)
-checkMatch("grape, cherry", pattern)
+pattern = re.compile(r'カガミ')
+checkMatch('カワルカガミ, ハテナビト, Flow', pattern)  # カガミ
+checkMatch('edge, エレワ', pattern)  # 一致する文字はありません
+print("\n")
+
+
+def checkMatchB(msgB, patternB, start, end):
+    resultB = patternB.search(msgB, start, end)
+    if resultB:
+        print(resultB.group(0))
+    else:
+        print("一致する文字はありません")
+
+
+msgB = "タワーレコード渋谷店"
+patternB = re.compile(r'レコード')
+checkMatchB(msgB, patternB, 0, 8)
+checkMatchB(msgB, patternB, 0, 1)
