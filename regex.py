@@ -24,7 +24,21 @@ else:
 
 patC = re.compile(r"59nh")
 resultPatC = patC.search(target64)
-if result:
+if resultPatC:
     print(resultPatC.group() + "は存在します")
 else:
     print("一致しません")
+print("\n")
+
+
+def checkMatch(target64, pattern):
+    resultPatD = pattern.search(target64)
+    if resultPatD:
+        print(resultPatD.group(0))
+    else:
+        print("マッチしません")
+
+
+pattern = re.compile(r"jy59")
+checkMatch("496, fd3r, 59", pattern)
+checkMatch("grape, cherry", pattern)
