@@ -24,12 +24,16 @@ else:
     for s in result2:
         print(s)
 
-print(str(len(result2)) + "つ一致する要素があります")
+print(str(len(result2)) + "つ一致する要素があります\n")
 
-msg3 = 'MA-1989, JO-1998, PP-1999'
+msg3 = 'MA-1989, JO-1998, PP-199'
 pattern3 = re.compile(r'([A-Z]{2})-([0-9]{4})')
 result3 = pattern3.finditer(msg3)
+m = None
 for m in result3:
     print("Match:" + m.group(0))
     print("アルファベット:" + m.group(1))
     print("数値:" + m.group(2))
+
+if m is None:
+    print("Noneです")
