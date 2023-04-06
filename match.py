@@ -8,3 +8,13 @@ if result1:
     print("年：" + result1.group(1))
     print("月：" + result1.group(2))
     print("日：" + result1.group(3))
+
+print("\n")
+msg2 = 'birthday is 1999/02/03'
+pat2 = re.compile(r"(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})")
+result2 = pat2.search(msg2)
+if result2:
+    print("マッチ：" + result2.group(0))
+    print("group[年]：" + result2.group("year"))
+    print("group[月]：" + result2.group("month"))
+    print("group[日]：" + result2.group("day"))
