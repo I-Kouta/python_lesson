@@ -15,6 +15,12 @@ pat2 = re.compile(r"(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})")
 result2 = pat2.search(msg2)
 if result2:
     print("マッチ：" + result2.group(0))
-    print("group[年]：" + result2.group("year"))
-    print("group[月]：" + result2.group("month"))
-    print("group[日]：" + result2.group("day"))
+    print("group[年]:" + result2.group("year"))
+    print("group[月]:" + result2.group("month"))
+    print("group[日]:" + result2.group("day"))
+
+print("\n")
+msg3 = "バリデーション:文字数,型,一意性,同一か"
+pat3 = re.compile(r":|,")
+result3 = pat3.split(msg3)
+print(result3)
