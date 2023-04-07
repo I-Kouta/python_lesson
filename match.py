@@ -26,11 +26,23 @@ result3 = pat3.split(msg3)
 print(result3, "\n")
 
 msg4 = "Red, red, RED, Blue, blue, オレンジ, pink"
-pat4 = re.compile(r"Red|RED")
-result4 = pat4.sub("赤", msg4)
+pat4 = re.compile(r"Red|RED")  # これが置換される
+result4 = pat4.sub("赤", msg4)  # これに置換される
 print(result4, "\n")
 
 msg5 = "1994-07-05"
 pat5 = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
 result5 = pat5.sub(r"\1年\2月\3日", msg5)
 print(result5)
+
+msg6 = "It's My Life"
+pat6 = re.compile(r"\b[a-zA-Z]+?\b")
+
+
+def replaceStr(m):
+    s = m.group(0)
+    return s.lower()  # 対はupper
+
+
+result6 = pat6.sub(replaceStr, msg6)
+print(result6)
