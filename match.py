@@ -23,4 +23,9 @@ print("\n")
 msg3 = "バリデーション:文字数,型,一意性,同一か"
 pat3 = re.compile(r":|,")
 result3 = pat3.split(msg3)
-print(result3)
+print(result3, "\n")
+
+msg4 = "Red, red, RED, Blue, blue, オレンジ, pink"
+pat4 = re.compile(r"Red|RED")
+result4 = pat4.sub("赤", msg4)
+print(result4)
