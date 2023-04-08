@@ -8,4 +8,9 @@ pat2 = re.compile(r"s.n")
 pat2_0 = re.compile(r"s..n")
 print(bool(pat2.search("sunset")))  # .(ドット)が任意の一文字に相当する,true
 print(bool(pat2.search("soon")))  # false
-print(bool(pat2_0.search("soon")))  # true
+print(bool(pat2_0.search("soon")), "\n")  # true
+
+pat3 = re.compile(r"Gl[ny]")
+print(bool(pat3.search("Gln")))  # グルタミン,true
+print(bool(pat3.search("Glu")))  # グルタミン酸,false
+print(bool(pat3.search("Gly")))  # グリシン,true
