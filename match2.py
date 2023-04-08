@@ -20,4 +20,12 @@ print(bool(pat3_0.search("Glu")), "\n")  # nとyを含まない場合なのでtr
 pat4 = re.compile(r"\d{3}-\d{4}-\d{4}")  # \d:0-9の意味
 print(bool(pat4.search("090-1111-2222")))  # true
 print(bool(pat4.search("09011112222")))  # false
-print(bool(pat4.search("111-2222")))  # false
+print(bool(pat4.search("111-2222")), "\n")  # false
+
+pat5 = re.compile(r"^198")  # 先頭にマッチ,\Aと同様
+pat5_0 = re.compile(r"198$")  # 末尾でマッチ,\Zと同様
+print(bool(pat5.search("1988-09-20")))  # true
+print(bool(pat5.search("1988/09/20")))  # true
+print(bool(pat5.search("1996-02-10")))  # false
+print(bool(pat5.search("002-2198")))  # false
+print(bool(pat5_0.search("002-2198")))  # true
