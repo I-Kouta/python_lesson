@@ -15,4 +15,9 @@ pat3_0 = re.compile(r"Gl[^ny]")
 print(bool(pat3.search("Gln")))  # グルタミン,true
 print(bool(pat3.search("Glu")))  # グルタミン酸,false
 print(bool(pat3.search("Gly")))  # グリシン,true
-print(bool(pat3_0.search("Glu")))  # nとyを含まない場合なのでtrue
+print(bool(pat3_0.search("Glu")), "\n")  # nとyを含まない場合なのでtrue
+
+pat4 = re.compile(r"\d{3}-\d{4}-\d{4}")  # \d:0-9の意味
+print(bool(pat4.search("090-1111-2222")))  # true
+print(bool(pat4.search("09011112222")))  # false
+print(bool(pat4.search("111-2222")))  # false
