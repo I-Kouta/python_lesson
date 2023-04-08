@@ -11,6 +11,8 @@ print(bool(pat2.search("soon")))  # false
 print(bool(pat2_0.search("soon")), "\n")  # true
 
 pat3 = re.compile(r"Gl[ny]")
+pat3_0 = re.compile(r"Gl[^ny]")
 print(bool(pat3.search("Gln")))  # グルタミン,true
 print(bool(pat3.search("Glu")))  # グルタミン酸,false
 print(bool(pat3.search("Gly")))  # グリシン,true
+print(bool(pat3_0.search("Glu")))  # nとyを含まない場合なのでtrue
