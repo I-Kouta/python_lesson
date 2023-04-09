@@ -35,4 +35,14 @@ pat10_0 = re.compile(r"be{1,4}n")  # 1, 4みたいにスペースは不可
 print(bool(pat10.search("been")))  # true
 print(bool(pat10.search("ben")))  # false
 print(bool(pat10_0.search("ben")))  # true
-print(bool(pat10_0.search("beeeeen")))  # false
+print(bool(pat10_0.search("beeeeen")), "\n")  # false
+
+pat11 = re.compile(r"<em>.*</em>")
+msg11 = "<p>今日は<em>快晴の</em>一日です</p>"
+result11 = pat11.search(msg11)
+print(result11.group(0), "\n")
+
+pat12 = re.compile(r"[0-9]{3}-[0-9]{4}")
+msg12 = "郵便番号:111-2222"
+result12 = pat12.search(msg12)
+print(result12.group(0))
