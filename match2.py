@@ -31,5 +31,8 @@ print(bool(pat5.search("002-2198")))  # false
 print(bool(pat5_0.search("002-2198")), "\n")  # true
 
 pat10 = re.compile(r"be{2}n")  # *:0回以上、?:0回か1回
+pat10_0 = re.compile(r"be{1,4}n")  # 1, 4みたいにスペースは不可
 print(bool(pat10.search("been")))  # true
 print(bool(pat10.search("ben")))  # false
+print(bool(pat10_0.search("ben")))  # true
+print(bool(pat10_0.search("beeeeen")))  # false
