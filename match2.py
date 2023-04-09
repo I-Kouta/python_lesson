@@ -28,4 +28,8 @@ print(bool(pat5.search("1988-09-20")))  # true
 print(bool(pat5.search("1988/09/20")))  # true
 print(bool(pat5.search("1996-02-10")))  # false
 print(bool(pat5.search("002-2198")))  # false
-print(bool(pat5_0.search("002-2198")))  # true
+print(bool(pat5_0.search("002-2198")), "\n")  # true
+
+pat10 = re.compile(r"be{2}n")  # *:0回以上、?:0回か1回
+print(bool(pat10.search("been")))  # true
+print(bool(pat10.search("ben")))  # false
