@@ -45,10 +45,16 @@ print(result11.group(0), "\n")
 pat12 = re.compile(r"[0-9]{3}-[0-9]{4}")
 msg12 = "郵便番号:111-2222"
 result12 = pat12.search(msg12)
-print(result12.group(0))
+print(result12.group(0), "\n")
 
 # 数字が1-3つのあと.が続く+1-3つの数値,\.は.を文字として認識させるため
 pat13 = re.compile(r"(\d{1,3}\.){3}\d{1,3}")
 msg13 = "IPアドレスは123.432.0.232です"
 result13 = pat13.search(msg13)
-print(result13.group(0))
+print(result13.group(0), "\n")
+
+pat14 = re.compile(r"\d{3}-\d{4}-\d{4}|\d{11}")
+print(bool(pat14.search("080-0226-0334")))  # true
+print(bool(pat14.search("08002260334")))  # true
+print(bool(pat14.search("0120-111-222")))  # false
+print(bool(pat14.search("000-1111")))  # false
