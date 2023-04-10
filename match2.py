@@ -54,7 +54,11 @@ result13 = pat13.search(msg13)
 print(result13.group(0), "\n")
 
 pat14 = re.compile(r"\d{3}-\d{4}-\d{4}|\d{11}")
+pat14_0 = re.compile(r"\b(Red|red)\b")  # 独立したRed(red)のみ
 print(bool(pat14.search("080-0226-0334")))  # true
 print(bool(pat14.search("08002260334")))  # true
 print(bool(pat14.search("0120-111-222")))  # false
-print(bool(pat14.search("000-1111")))  # false
+print(bool(pat14.search("000-1111")), "\n")  # false
+print(bool(pat14_0.search("tired")))  # false
+print(bool(pat14_0.search("Redwood")))  # false
+print(bool(pat14_0.search("Red")))  # true
