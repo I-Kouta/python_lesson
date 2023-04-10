@@ -61,4 +61,10 @@ print(bool(pat14.search("0120-111-222")))  # false
 print(bool(pat14.search("000-1111")), "\n")  # false
 print(bool(pat14_0.search("tired")))  # false
 print(bool(pat14_0.search("Redwood")))  # false
-print(bool(pat14_0.search("Red")))  # true
+print(bool(pat14_0.search("Red")), "\n")  # true
+
+pat15 = re.compile(r"製品(?:Code|コード|code):([a-zA-Z]{2})-(\d{2})")  # (?と)で囲む
+msg15 = "製品code:Ab-03"
+result15 = pat15.search(msg15)
+print(result15.group(1))  # Ab
+print(result15.group(2))  # 03
