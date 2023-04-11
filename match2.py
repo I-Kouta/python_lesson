@@ -72,3 +72,8 @@ print(result15.group(1))  # Ab
 print(result15.group(2))  # 03
 print(result15_0.group("section"))  # Ab
 print(result15_0.group("code"))  # 03
+
+pat16 = re.compile(r"<(.+)>.*</\1>")  # .+:任意の一文字
+msg16 = "aaa<div>bbb<span>ccc</span>ddd</div>ee"
+result16 = pat16.search(msg16)
+print(result16.group(0))
