@@ -64,7 +64,11 @@ print(bool(pat14_0.search("Redwood")))  # false
 print(bool(pat14_0.search("Red")), "\n")  # true
 
 pat15 = re.compile(r"製品(?:Code|コード|code):([a-zA-Z]{2})-(\d{2})")  # (?と)で囲む
+pat15_0 = re.compile(r"製品code:(?P<section>[a-zA-Z]{2})-(?P<code>\d{2})")
 msg15 = "製品code:Ab-03"
 result15 = pat15.search(msg15)
+result15_0 = pat15_0.search(msg15)
 print(result15.group(1))  # Ab
 print(result15.group(2))  # 03
+print(result15_0.group("section"))  # Ab
+print(result15_0.group("code"))  # 03
