@@ -76,4 +76,11 @@ print(result15_0.group("code"))  # 03
 pat16 = re.compile(r"<(.+)>.*</\1>")  # .+:任意の一文字
 msg16 = "aaa<div>bbb<span>ccc</span>ddd</div>ee"
 result16 = pat16.search(msg16)
-print(result16.group(0))
+print(result16.group(0), "\n")
+
+pat17 = re.compile(r"smart(?!phone)")  # !は否定
+print(bool(pat17.search("smartLock")))  # true
+print(bool(pat17.search("smart")))  # true
+print(bool(pat17.search("smartphone")))  # false
+result17 = pat17.search("smartLock")
+print(result17.group(0))  # 出力はsmartのみ
