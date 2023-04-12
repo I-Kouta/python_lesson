@@ -80,11 +80,14 @@ print(result16.group(0), "\n")
 
 pat17 = re.compile(r"smart(?!phone)")  # !は否定
 pat17_0 = re.compile(r"(?<=smart)phone")  # 前にsmartがある時だけ
+pat17_1 = re.compile(r"(?<!smart)phone")  # 前にsmartがある時はfalse
 print(bool(pat17.search("smartLock")))  # true
 print(bool(pat17.search("smart")))  # true
 print(bool(pat17.search("smartphone")))  # false
 print(bool(pat17_0.search("smartphone")))  # true
+print(bool(pat17_1.search("smartphone")))  # false
 print(bool(pat17_0.search("iphone")))  # false
+print(bool(pat17_1.search("iphone")))  # true
 print("\n")
 result17 = pat17.search("smartLock")
 print(result17.group(0))  # 出力はsmartのみ
