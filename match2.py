@@ -93,4 +93,15 @@ print(bool(pat17_0.search("iphone")))  # false
 print(bool(pat17_1.search("iphone")))  # true
 print("\n")
 result17 = pat17.search("smartLock")
-print(result17.group(0))  # 出力はsmartのみ
+print(result17.group(0), "\n")  # 出力はsmartのみ
+
+# フラグ一覧
+# re.ASC||→\w(\W):[a-zA-Z0-9_]、\s(\S):Unicode空白文字([\t\n\r\f\v])を含む
+pat18 = re.compile(r"\d{3}-\d{4}")  # \dは[0-9]
+print(bool(pat18.search("222-0000")))  # true
+pat18_1 = re.compile(r"\D")  # [0-9]以外
+print(bool(pat18.search("2220000")))  # false
+print(bool(pat18_1.search("2220000")))  # false
+pat18_2 = re.compile(r"\w{5}", re.ASCII)
+print(bool(pat18_2.search("abCDe")))  # true
+print(bool(pat18_2.search("ポリゴンZ")))  # false
