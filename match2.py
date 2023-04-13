@@ -104,4 +104,8 @@ print(bool(pat18.search("2220000")))  # false
 print(bool(pat18_1.search("2220000")))  # false
 pat18_2 = re.compile(r"\w{5}", re.ASCII)
 print(bool(pat18_2.search("abCDe")))  # true
-print(bool(pat18_2.search("ポリゴンZ")))  # false
+print(bool(pat18_2.search("ポリゴンZ")), "\n")  # false
+pat18_3 = re.compile(r"Perfume", re.IGNORECASE)  # 大文字と小文字の区別がなくなる
+print(bool(pat18_3.search("PERFUME")))
+print(bool(pat18_3.search("Perfume")))
+print(bool(pat18_3.search("perfume")))
