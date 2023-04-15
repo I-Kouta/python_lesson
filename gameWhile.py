@@ -28,4 +28,4 @@ while ans < 1000:  # これを越える値
     ans += n  # ここで値の処理を記述(足す、累乗にするなど)
 else:
     print(str(n) + "まで足すと総和は" + str(ans) + "となり、目的の値を超えます")
-    print(str(n-1) + "まで足すと総和は" + str(ans-n) + "です")
+    print(str(n-1) + "まで足すと総和は" + str(ans-n) + "です\n")
