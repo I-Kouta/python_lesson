@@ -31,9 +31,9 @@ pattern3 = re.compile(r'([A-Z]{2})-([0-9]{4})')
 result3 = pattern3.finditer(msg3)
 m = None
 for m in result3:
-    print("Match:" + m.group(0))
+    print(f"Match:{m.group(0)}")
     print("アルファベット:" + m.group(1))
-    print("数値:" + m.group(2))
+    print(f"数値: {m.group(2)}")
 
 if m is None:
     print("Noneです")
