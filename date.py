@@ -22,3 +22,10 @@ print(dt5)  # 今の日付と時間、()は省略可
 
 today = datetime.date.today()
 print(today)  # 今日
+
+print(dt5.year)  # 年だけ
+print(dt5.month)  # 年だけ
+print(dt5.day)  # 日付だけ
+print(dt5.hour)  # 時間だけ
+print(dt5.minute)  # 分だけ
+print(dt5.second)  # 秒だけ
