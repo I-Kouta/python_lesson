@@ -27,7 +27,7 @@ while ans < 1000:  # これを越える値
     n += 1
     ans += n  # ここで値の処理を記述(足す、累乗にするなど)
 else:
-    print(str(n) + "まで足すと総和は" + str(ans) + "となり、目的の値を超えます")
+    print(f"{n}まで足すと総和は{ans}となり、目的の値を超えます")
     print(str(n-1) + "まで足すと総和は" + str(ans-n) + "です\n")
 
 # コラッツ予想
@@ -43,7 +43,7 @@ def conjecture(n):
         else:  # (奇数の場合)
             n = n * 3 + 1  # 3倍して1足す
         count += 1
-        print(f"{count}回目の処理で値は{n}です")
+        print(str(count) + "回目の処理で値は" + str(n) + "です")
     print(f"初期値{initial_value}は{count}回の処理で1になります")
 
 
