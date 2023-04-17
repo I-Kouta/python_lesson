@@ -28,4 +28,7 @@ print(dt5.month)  # 年だけ
 print(dt5.day)  # 日付だけ
 print(dt5.hour)  # 時間だけ
 print(dt5.minute)  # 分だけ
-print(dt5.second)  # 秒だけ
+print(dt5.second, "\n")  # 秒だけ
+
+dt6 = datetime.datetime.strptime("2022/04/17 14:34:22", "%Y/%m/%d %H:%M:%S")
+print(dt6)
