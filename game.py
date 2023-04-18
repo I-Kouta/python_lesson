@@ -7,6 +7,16 @@ def mean(numbers):
 
 mean([1, 2, 3, 4, 5])
 # 2.内積を求める
+
+
+def dot_product(list1, list2):
+    sumProduct = sum([x * y for x, y in zip(list1, list2)])
+    print(f"{inner_productA}と{inner_productB}の内積は{sumProduct}です")
+
+
+inner_productA = [1, 2, 3]
+inner_productB = [4, 5, 6]
+dot_product(inner_productA, inner_productB)
 # 3.回文かどうか判定する
 # 4.フィボナッチ数列のn番目と求める
 # 5.リスト内で最大値・最小値を求める
