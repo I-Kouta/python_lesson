@@ -40,7 +40,7 @@ def sequence(n):
     if n < 2:
         return n
     else:
-        return sequence(n-2) + sequence(n-1)  # 重複を防ぐため
+        return sequence(n-2) + sequence(n-1)  # 重複を防ぐ,先に小さい値を計算する
 
 
 def sequence_sum(n):
@@ -53,3 +53,13 @@ def sequence_sum(n):
 sequence_sum(5)
 
 # 5.リスト内で最大値・最小値を求める
+
+
+def find_min_max(numbers):
+    if len(numbers) == 0:
+        print("要素がありません")
+    else:
+        print(f"最小値は{min(numbers)}、最大値は{max(numbers)}です")
+
+
+find_min_max([2, 5, 6, 1, 8, 5])
