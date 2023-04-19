@@ -33,6 +33,7 @@ is_palindrome("eye")
 # フィボナッチ数列のn番目までの総和を求める
 # 指定した値がフィボナッチ数列に含まれるか認識し、含まれる場合は総和を求める
 # 値が含まれる場合はそこまでの配列と和を求める
+print("\n")
 
 
 def sequence(n):
@@ -42,6 +43,13 @@ def sequence(n):
         return sequence(n-1) + sequence(n-2)
 
 
-print(sequence(6))
+def sequence_sum(n):
+    sequence_list = [sequence(i) for i in range(n)]
+    sequence_sum = sum(sequence_list)
+    print(f"{n}番目までのフィボナッチ数列は{sequence_list}です")
+    print(f"{n}番目までのフィボナッチ数列の総和は{sequence_sum}です")
+
+
+sequence_sum(6)
 
 # 5.リスト内で最大値・最小値を求める
