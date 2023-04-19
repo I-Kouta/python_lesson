@@ -18,6 +18,16 @@ inner_productA = [1, 2, 3]
 inner_productB = [4, 5, 6]
 dot_product(inner_productA, inner_productB)
 # 3.回文かどうか判定する
+
+
+def is_palindrome(s):
+    if s == s[::-1]:
+        print(f"{s}は回文です")
+    else:
+        print(f"{s}は回文ではありません")
+
+
+is_palindrome("eye")
 # 4.フィボナッチ数列のn番目を求める(sequence)
 # フィボナッチ数列のn番目までの総和を求める
 # 指定した値がフィボナッチ数列に含まれるか認識し、含まれる場合は総和を求める
