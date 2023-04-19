@@ -29,7 +29,19 @@ def is_palindrome(s):
 
 is_palindrome("eye")
 # 4.フィボナッチ数列のn番目を求める(sequence)
+# 1, 1, 2, 3, 5, 8, 13, 21, 34, …
 # フィボナッチ数列のn番目までの総和を求める
 # 指定した値がフィボナッチ数列に含まれるか認識し、含まれる場合は総和を求める
 # 値が含まれる場合はそこまでの配列と和を求める
+
+
+def sequence(n):
+    if n < 2:
+        return n
+    else:
+        return sequence(n-1) + sequence(n-2)
+
+
+print(sequence(6))
+
 # 5.リスト内で最大値・最小値を求める
