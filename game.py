@@ -40,16 +40,16 @@ def sequence(n):
     if n < 2:
         return n
     else:
-        return sequence(n-1) + sequence(n-2)
+        return sequence(n-2) + sequence(n-1)  # 重複を防ぐため
 
 
 def sequence_sum(n):
-    sequence_list = [sequence(i) for i in range(n)]
-    sequence_sum = sum(sequence_list)
+    sequence_list = [sequence(i+1) for i in range(n+1)]  # ここの+1を削除すると0からの数列になる
+    sequence_sum = sum(sequence_list[::-1])
     print(f"{n}番目までのフィボナッチ数列は{sequence_list}です")
     print(f"{n}番目までのフィボナッチ数列の総和は{sequence_sum}です")
 
 
-sequence_sum(6)
+sequence_sum(5)
 
 # 5.リスト内で最大値・最小値を求める
