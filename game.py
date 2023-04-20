@@ -52,7 +52,7 @@ def sequence_sum(n):
 
 sequence_sum(5)
 
-# 5.リスト内で最大値・最小値を求める
+# 5.リスト内で最大値・最小値・中央値を求める
 
 
 def find_min_max(numbers):
