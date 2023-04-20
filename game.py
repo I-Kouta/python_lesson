@@ -59,7 +59,7 @@ def find_min_max(numbers):
     if len(numbers) == 0:
         print("要素がありません")
     else:
-        print(f"最小値は{min(numbers)}、最大値は{max(numbers)}です")
+        print(f"要素:{len(numbers)} 最小値:{min(numbers)} 最大値:{max(numbers)}")
 
 
 find_min_max([2, 5, 6, 1, 8, 5])
