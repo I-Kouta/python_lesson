@@ -12,7 +12,7 @@ def count_occurrences(string, target):
 
 
 count_occurrences("perfume", "e")
-
+print("\n")
 # リストの重複を削除する
 # list:ただの集合をリストに変換
 # set:重複している要素を削除
@@ -24,7 +24,16 @@ def remove_duplicates(numbers):
 
 
 remove_duplicates([5, 4, 3, 2, 1, 2, 3, 4, 5])
-# 指定した文字列を取り除く
+print("\n")
+# 指定した文字列を取り除く・置き換える
+
+
+def remove_string(s, target):
+    new_s = s.replace(target, "")  # ""内の文字に置き換える
+    print(f"{s}から{target}を取り除いた結果は{new_s}です")
+
+
+remove_string("safari", "a")
 # 要素を逆順にする
 # 文字列を反転させる
 # 辞書型データをソートする
