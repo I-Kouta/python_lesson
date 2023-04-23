@@ -44,4 +44,14 @@ def reverse_list(numbers):
 
 
 reverse_list([1, 2, 3, 4, 5])
+print("\n")
 # 辞書型データをソートする
+
+
+def sort_dictionary(d):
+    sort_d = dict(sorted(d.items(), key=lambda x: x[1]))
+    print(f"ソート前の辞書:{d}")
+    print(f"値に基づいてソートされた辞書:{sort_d}")
+
+
+sort_dictionary({"a": 2, "b": 1, "c": 3})
