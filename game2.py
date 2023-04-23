@@ -34,6 +34,14 @@ def remove_string(s, target):
 
 
 remove_string("safari", "a")
-# 要素を逆順にする
-# 文字列を反転させる
+print("\n")
+# 要素を逆順にする(文字列も可)
+
+
+def reverse_list(numbers):
+    reverse_numbers = numbers[::-1]
+    print(f"{numbers}を逆順にすると{reverse_numbers}です")
+
+
+reverse_list([1, 2, 3, 4, 5])
 # 辞書型データをソートする
