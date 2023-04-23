@@ -55,3 +55,7 @@ def sort_dictionary(d):
 
 
 sort_dictionary({"a": 2, "b": 1, "c": 3})
+print("\n")
+# フィボナッチ数列のn項目を求める
+# 整数が素数かどうか判別する
+# 整数2つの最大公約数を求める
