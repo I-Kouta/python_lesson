@@ -11,11 +11,11 @@ print("\n")
 # 10進数を2進数に変換して出力する記述
 num = 10
 binary_num = format(num, 'b')
-print(str(num) + 'は2進数では' + binary_num)
+print(f"{num}は2進数では{binary_num}")
 # 2進数を10進数に変換
 num_bit = "101000"
 decimal_num = int(num_bit, 2)
-print(str(num_bit) + 'は10進数では' + str(decimal_num))
+print(f"{num_bit}は10進数では{decimal_num}")
 del decimal_num  # 変数を削除する
 # 10=>1010, 13=>1101
 # |：片方でもが1の場合は1を返すので1111
