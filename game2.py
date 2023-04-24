@@ -57,5 +57,18 @@ def sort_dictionary(d):
 sort_dictionary({"a": 2, "b": 1, "c": 3})
 print("\n")
 # フィボナッチ数列のn項目を求める
+# 1から始まる場合
+
+
+def fibonacci(n):
+    if n < 2:
+        return n
+    else:
+        return fibonacci(n - 2) + fibonacci(n - 1)
+
+
+n = 9
+sequence_sum = fibonacci(n)
+print(f"1から始まるフィボナッチ数列の{n}番目の値は{sequence_sum}です")
 # 整数が素数かどうか判別する
 # 整数2つの最大公約数を求める
