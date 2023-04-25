@@ -88,7 +88,6 @@ sequence_sumM = fibonacci(m)
 print(f"0から始まるフィボナッチ数列の{m}番目の値は{sequence_sumM}です")
 print("\n")
 # 整数が素数かどうか判別する
-# n個目までの素数を配列で出力
 # 49の場合→range内は2から8
 # i = 7のとき、if文内が成立する
 # 13の場合→range内は2, 3, 4
@@ -105,4 +104,24 @@ def is_prime(n):
 
 
 is_prime(7)
+print("\n")
+# n個目までの素数を配列で出力：エラトステネスの篩
+
+
+def get_prime(n):
+    prime_numbers = [2]
+    current_number = 3
+    while len(prime_numbers) < n:
+        is_primes = True
+        for divisor in range(2, int(current_number ** 0.5) + 1):
+            if current_number % divisor == 0:
+                is_primes = False
+                break
+        if is_primes:
+            prime_numbers.append(current_number)
+        current_number += 2
+    print(prime_numbers)
+
+
+get_prime(10)
 # 整数2つの最大公約数を求める
