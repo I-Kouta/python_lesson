@@ -86,5 +86,23 @@ def fibonacci_zero(m):
 m = 0
 sequence_sumM = fibonacci(m)
 print(f"0から始まるフィボナッチ数列の{m}番目の値は{sequence_sumM}です")
+print("\n")
 # 整数が素数かどうか判別する
+# n個目までの素数を配列で出力
+# 49の場合→range内は2から8
+# i = 7のとき、if文内が成立する
+# 13の場合→range内は2, 3, 4
+# いずれの値でもif文内が成立しないため素数
+
+
+def is_prime(n):
+    if n < 2:
+        print(f"2未満の数値は素数ではありません")
+    for i in range(2, int(n ** 0.5) + 1):  # n ** 0.5：nの平方根
+        if n % i == 0:
+            print(f"{n}は素数ではありません")
+    print(f"{n}は素数です")
+
+
+is_prime(7)
 # 整数2つの最大公約数を求める
