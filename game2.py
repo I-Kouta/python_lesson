@@ -124,4 +124,15 @@ def get_prime(n):
 
 
 get_prime(10)
+print("\n")
 # 整数2つの最大公約数を求める
+
+
+def gcd(a, b):
+    if b == 0:
+        return a
+    else:
+        return gcd(b, a % b)
+
+
+print(gcd(8, 12))
