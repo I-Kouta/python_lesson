@@ -125,7 +125,7 @@ def get_prime(n):
 
 get_prime(10)
 print("\n")
-# 整数2つの最大公約数を求める
+# 整数2つの最大公約数・最小公倍数を求める
 
 
 def gcd(a, b):
@@ -139,5 +139,6 @@ def gcd(a, b):
 numA = 8
 numB = 12
 result = gcd(numA, numB)
+lcm = (numA*numB) // result
 print(f"{numA}と{numB}の最大公約数は{result}です")
-# 整数2つの最小公倍数を求める
+print(f"{numA}と{numB}の最小公倍数は{lcm}です")
