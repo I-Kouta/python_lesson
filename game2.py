@@ -129,10 +129,15 @@ print("\n")
 
 
 def gcd(a, b):
-    if b == 0:
-        return a
-    else:
-        return gcd(b, a % b)
+    if a < b:
+        a, b = b, a  # 常にaが大きくなるように入れ替える
+    while b != 0:
+        a, b = b, a % b  # (12, 8)→(8, 4)、(8, 4)→(4, 0)
+    return a
 
 
-print(gcd(8, 12))
+numA = 8
+numB = 12
+result = gcd(numA, numB)
+print(f"{numA}と{numB}の最大公約数は{result}です")
+# 整数2つの最小公倍数を求める
