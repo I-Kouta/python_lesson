@@ -1,10 +1,7 @@
-# Libraries Import
-import tkinter as tk
-
-# 簡易的な電卓を作ってみた！
+import tkinter as tk  # ライブラリのインポート
 
 
-class CaluGui(object):
+class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
     def __init__(self, app=None):
         # Window Setting
         app.title('簡易的な電卓を作ってみた')  # Window のタイトル
@@ -12,13 +9,10 @@ class CaluGui(object):
 
 
 def main():
-    # Window Setting
     app = tk.Tk()
     CaluGui(app)
-
-    # Display
-    app.mainloop()  # Window をループで回すことで Widgit に対応できるようになる
+    app.mainloop()  # Window をループで回すことで Widgit に対応できるようになる、メインループ実行
 
 
-if __name__ == '__main__':
+if __name__ == '__main__':  # スクリプトが直接実行された時にこれを実行する
     main()
