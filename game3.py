@@ -29,3 +29,17 @@ stringsB = ["日本語", "アイスクリーム", "神奈川県", "いーぶい"
 sort_stringsB = sorted(
     stringsB, key=lambda s: unicodedata.normalize('NFKC', s).lower())
 print(sort_stringsB)
+
+# 文字列を並び替えて等しくできるか
+
+
+def can_rearrange_to_t(s, t):
+    return sorted(s) == sorted(t)
+
+
+s = "abc"
+t = "bca"
+if can_rearrange_to_t(s, t):
+    print("yes")
+else:
+    print("no")
