@@ -30,6 +30,7 @@ class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
 
 def main():
     app = tk.Tk()
+    app.resizable(width=False, height=False)
     CaluGui(app)
     app.mainloop()  # Window をループで回すことでWidgetに対応できるようになる、メインループ実行
 
