@@ -51,3 +51,7 @@ if (a * b) % 2 == 0:
     print("even")
 else:
     print("odd")
+print("\n")
+# 二分探索アルゴリズム
+data = [10, 34, 43, 21, 98, 32]
+array = sorted(data)
