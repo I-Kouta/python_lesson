@@ -53,6 +53,12 @@ class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
 
             res = "= " + str(eval(self.calc_str))  # eval関数(文字列が式として評価される)
             self.ans_var.set(res)
+        elif check == "C":
+            self.calc_str = ""
+            self.ans_var.set("")
+        elif check == "B":
+        elif check in SYMBOL:
+        else:
 
 
 def main():
