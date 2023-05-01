@@ -30,10 +30,8 @@ class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
         # parts setting
         self.calc_var = tk.StringVar()  # 計算式用動的変数
         self.ans_var = tk.StringVar()  # 結果用動的変数
-        calc_label = tk.Label(
-            calc_frame, textvariable=self.calc_var, font=("", 20))  # 計算式用label
-        ans_label = tk.Label(
-            calc_frame, textvariable=self.ans_var, font=("", 15))  # 結果用label
+        calc_label = tk.Label(calc_frame, textvariable=self.calc_var, font=("", 20))  # 計算式用label
+        ans_label = tk.Label(calc_frame, textvariable=self.ans_var, font=("", 15))  # 結果用label
         calc_label.pack(anchor=tk.E)  # 右揃え
         ans_label.pack(anchor=tk.E)
 
