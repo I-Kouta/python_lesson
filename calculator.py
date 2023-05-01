@@ -57,6 +57,7 @@ class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
             self.calc_str = ""
             self.ans_var.set("")
         elif check == "B":
+            self.calc_str = self.calc_str[:-1]
         elif check in SYMBOL:
         else:
 
