@@ -61,8 +61,8 @@ class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
         elif check in SYMBOL:  # 記号の場合
             if self.calc_str[-1:] not in SYMBOL and self.calc_str[-1:] != "":
                 self.calc_str += check
-        elif self.calc_str[-1:] in SYMBOL:  # 記号の場合は入れ替える
-            self.calc_str = self.calc_str[:-1] + check
+            elif self.calc_str[-1:] in SYMBOL:  # 記号の場合は入れ替える
+                self.calc_str = self.calc_str[:-1] + check
         else:  # 数字の場合
             self.calc_str += check
 
