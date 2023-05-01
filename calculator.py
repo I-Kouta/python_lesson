@@ -39,8 +39,7 @@ class CaluGui(object):  # ウィンドウ・タイトル・サイズ設定
 
         for y, row in enumerate(BUTTON, 1):  # ボタン配置
             for x, num in enumerate(row):
-                button = tk.Button(button_frame, text=num,
-                                   font=("", 15), width=6, height=3)
+                button = tk.Button(button_frame, text=num, font=("", 15), width=6, height=3)
                 button.grid(row=y, column=x)  # 列と行を指定して配置
                 button.bind("<Button-1>", self.click_button)  # ボタンが押された場合
 

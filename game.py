@@ -62,8 +62,7 @@ def find_min_max(numbers):
         sorted_numbers = sorted(numbers)  # 要素を昇順にする
         n = len(sorted_numbers)  # 変数に昇順された要素の数を代入
         if n % 2 == 0:  # 要素数が偶数の場合
-            median = (sorted_numbers[n // 2 - 1] +  # インデックス番号 + 1が値の個数目
-                      sorted_numbers[n // 2]) / 2
+            median = (sorted_numbers[n // 2 - 1] + sorted_numbers[n // 2]) / 2  # インデックス番号 + 1が値の個数目
         else:  # 要素数が奇数の場合
             median = sorted_numbers[n // 2]
         print(
