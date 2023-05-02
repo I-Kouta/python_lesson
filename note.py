@@ -16,3 +16,7 @@ print(f"{expr} を展開：{expr_ex}")
 
 expr_factor = sympy.factor(expr_ex)
 print(f"{expr_ex} を因数分解：{expr_factor}")
+
+expr1 = x + y - 7
+expr2 = 3 * x + 5 * y - 29
+print(sympy.solve([expr1, expr2]))  # {x: ?, y: ?}
