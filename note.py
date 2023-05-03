@@ -21,3 +21,8 @@ print(f"{expr_ex}=0の解:{sympy.solve(expr_ex)}")
 expr1 = x + y - 7
 expr2 = 3 * x + 5 * y - 29
 print(sympy.solve([expr1, expr2]))  # {x: ?, y: ?}
+
+expr3 = x**3 + 2*x**2 - x + 2
+expr3_1 = sympy.diff(expr3)
+print(f"{expr3}を微分：{expr3_1}")
+print(f"{expr3_1}を積分：{sympy.integrate(expr3_1)}")
